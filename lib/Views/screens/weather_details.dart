@@ -1,9 +1,9 @@
 
   import 'package:flutter/material.dart';
   import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_task/Views/widgets/custom_alert_dialog.dart';
 import 'package:weather_task/business_logic/cubit/weathert_cubit.dart';
 import 'package:weather_task/data/models/weather.dart';
-import 'package:weather_task/presentation/widgets/custom_alert_dialog.dart';
 
 import '../../general.dart';
 
@@ -52,6 +52,7 @@ import '../../general.dart';
                         cursorColor: General.kMainColor,
                         decoration: InputDecoration(
                           hintText: "Enter 3-5 Cities Sepearated with ' , ' ",
+                          hintStyle: TextStyle(fontSize: 10),
                           prefixIcon: Icon(
                             Icons.opacity_sharp,
                             color:General.kSecondaryColor,
@@ -120,7 +121,7 @@ import '../../general.dart';
                           }
 
                         },
-                        color: Color(General.getColorHexFromStr('3F51B5')),
+                        color: General.kClosedColor,
                         child: Text(
                           'Get the Weather Details',
                           style: TextStyle(color: Colors.white,

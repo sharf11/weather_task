@@ -4,12 +4,12 @@ import 'package:flutter/material.dart';
 class General {
 
   static Color kMainColor = Color(0xFFFA8208);
-  static Color kSecondaryColor = Color(0xFF4050B5);
+  static Color kSecondaryColor =Color(0xFFFA8208);
   //static Color kUnActiveColor = Colors.grey;
   static Color kUnActiveColor = Color(0xFFFFE6AC);
   static Color kOKColor = Color(0xFF2AED33);
-  static Color kPendingColor = Color(0xFF151976);
-  static Color kClosedColor = Color(0xFFFF0000);
+  static Color kPendingColor = Color(0xFFFA8208);
+  static Color kClosedColor = Color(0xFFFA8208);
 
   static sizeBoxHorizontial(space) {
     return SizedBox(

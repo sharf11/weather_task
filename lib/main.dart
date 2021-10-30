@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weather_task/data/web_services/current_location_weather.dart';
-import 'package:weather_task/presentation/screens/current_location_weather_screen.dart';
-import 'package:weather_task/presentation/screens/weather_details.dart';
+import 'package:weather_task/Views/screens/current_location_weather_screen.dart';
+import 'package:weather_task/Views/screens/weather_details.dart';
 
 import 'business_logic/cubit/current_location_cubit.dart';
 import 'business_logic/cubit/weathert_cubit.dart';
@@ -33,6 +33,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute:  Home.id,
+      theme: ThemeData(
+        accentColor: Colors.teal
+      ),
       routes: {
         Home.id: (context) => Home(),
         WeatherDetailsScreen.id: (context) => BlocProvider(
@@ -66,7 +69,10 @@ class Home extends StatelessWidget {
         Container(
             height: height*.5,
             width: width,
-            child: Image.asset('assets/images/temp_image.png',fit: BoxFit.fill,)),
+            child: Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: Image.asset('assets/images/temp_image.png',fit: BoxFit.fill,color: Colors.yellow,),
+            )),
 
 
         Spacer(),
@@ -80,7 +86,7 @@ class Home extends StatelessWidget {
             onPressed: ()   {
               Navigator.pushNamed(context, WeatherDetailsScreen.id);
             },
-            color: Color(General.getColorHexFromStr('3F51B5')),
+            color: General.kClosedColor,
             child: Text(
               'Find Weather For More Cities',
               style: TextStyle(color: Colors.white,
@@ -105,7 +111,7 @@ class Home extends StatelessWidget {
               Navigator.pushNamed(context, CurrentLocationScreen.id);
               // General.showMakeSureDialogue(txt: "asd", context: context);
             },
-            color: Color(General.getColorHexFromStr('3F51B5')),
+            color:General.kClosedColor,
             child: Text(
               // 'Add To Order'.tr,
               'Find Weather For My location',

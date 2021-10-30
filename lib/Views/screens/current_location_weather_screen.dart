@@ -5,8 +5,8 @@ import 'package:geolocator/geolocator.dart';
 import 'package:intl/intl.dart';
 import 'package:weather_task/business_logic/cubit/current_location_cubit.dart';
 import 'package:weather_task/data/models/weather_forecast5_model.dart';
-import 'package:weather_task/presentation/widgets/custom_alert_dialog.dart';
-import 'package:weather_task/presentation/widgets/modal_bottom_sheet.dart';
+import 'package:weather_task/Views/widgets/custom_alert_dialog.dart';
+import 'package:weather_task/Views/widgets/modal_bottom_sheet.dart';
 
 import '../../general.dart';
 
